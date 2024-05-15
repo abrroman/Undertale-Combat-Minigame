@@ -23,14 +23,14 @@ namespace UndertaleMinigame {
         void Start() {
             max = new Vector2(rightBorder.transform.position.x - 0.3f, topBorder.transform.position.y - 0.3f);
             min = new Vector2(-max.x, max.y - 4.3f);
-            Spawn();
+            Reset();
         }
 
         void Update() {
             Move();
         }
 
-        public void Spawn() {
+        public void Reset() {
             transform.position = _startPos;
         }
 

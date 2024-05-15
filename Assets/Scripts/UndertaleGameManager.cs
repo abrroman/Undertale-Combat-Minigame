@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 namespace UndertaleMinigame {
     public class UndertaleGameManager : MonoBehaviour {
         public int selectedAttack;
-        
+
         public Action PlayerWinsGame;
 
         [SerializeField]
@@ -24,18 +24,18 @@ namespace UndertaleMinigame {
         private int _rounds = 3;
 
         private void Start() {
-            NewRound();
+            StartRound();
         }
 
         private void Update() {
             if (IsAttackDone() && playerHp.Hp > 0) {
-                PlayerWinRound();
+                EndRound();
             } else if (playerHp.Hp <= 0) {
                 PlayerLost();
             }
         }
 
-        private void PlayerWinRound() {
+        private void EndRound() {
             _rounds--;
             if (_rounds <= 0) {
                 _battleEnded = true;
@@ -43,7 +43,7 @@ namespace UndertaleMinigame {
                 PlayerWinsGame?.Invoke();
             } else {
                 _roundEnded = false;
-                NewRound();
+                StartRound();
             }
         }
 
@@ -52,9 +52,8 @@ namespace UndertaleMinigame {
             _battleEnded = true;
         }
 
-        private void NewRound() {
-            player.Spawn();
-            StartCoroutine(Waiter());
+        private void StartRound() {
+            player.Reset();
             SelectAttack();
         }
 
