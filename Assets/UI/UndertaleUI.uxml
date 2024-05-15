@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Content/UI/Settings/2DBattleUIStyles.uss?fileID=7433441132597879392&amp;guid=c5bace33d98e2914eb483845528a8beb&amp;type=3#2DBattleUIStyles" />
+    <ui:VisualElement name="MainContainer" style="height: 100%; flex-direction: column-reverse;">
+        <ui:VisualElement name="Footer" class="footer">
+            <ui:VisualElement name="HPCounter" class="hpcounter">
+                <ui:VisualElement name="HP" class="heart" />
+                <ui:VisualElement name="HP" class="heart" />
+                <ui:VisualElement name="HP" class="heart" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

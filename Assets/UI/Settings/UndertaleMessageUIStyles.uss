@@ -1,0 +1,11 @@
+.deathmsglabel {
+    font-size: 800%;
+    color: rgb(255, 255, 255);
+    width: 50%;
+    height: 50%;
+    -unity-text-align: upper-center;
+    -unity-font: url("project://database/Assets/Content/UI/Settings/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=77082385a062d3443a89676f817c7e5f&type=3#NotInter-Regular");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    opacity: 1;
+}
